@@ -50,7 +50,7 @@ public class ModuleMonitorTask extends TaskDefaultImpl {
 		Map<MonitorInfo, MonitorExecution> mapInfo2Execution = new HashMap<>();
 
 		for (MonitorInfo mi : monitorInfoSet) {
-			MonitorExecution me = new MonitorExecution(urlBase + "xaps" + mi.getModule() + "/ok");
+			MonitorExecution me = new MonitorExecution(urlBase + mi.getModule() + "/ok");
 			mapInfo2Execution.put(mi, me);
 			(new Thread(me)).start();
 		}
