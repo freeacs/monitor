@@ -1,3 +1,5 @@
+v1.3.9 (2014-09-02)
+- add: re-introduced possibility of overriding URLs for each module (suspected removed in v1.3.0)
 v1.3.8 (2013-06-05)
 - ref: Sorted the monitor events listed
 v1.3.7 (2013-04-16)

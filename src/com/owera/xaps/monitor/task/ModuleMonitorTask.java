@@ -50,7 +50,10 @@ public class ModuleMonitorTask extends TaskDefaultImpl {
 		Map<MonitorInfo, MonitorExecution> mapInfo2Execution = new HashMap<>();
 
 		for (MonitorInfo mi : monitorInfoSet) {
-			MonitorExecution me = new MonitorExecution(urlBase + mi.getModule() + "/ok");
+		  String moduleUrl = Properties.get("monitor.url."+mi.getModule());
+		  if (moduleUrl == null)
+		    moduleUrl = urlBase + mi.getModule() + "/ok";
+			MonitorExecution me = new MonitorExecution(moduleUrl);
 			mapInfo2Execution.put(mi, me);
 			(new Thread(me)).start();
 		}

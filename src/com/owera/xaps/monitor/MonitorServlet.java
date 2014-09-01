@@ -43,7 +43,7 @@ import freemarker.template.TemplateException;
  */
 public class MonitorServlet extends HttpServlet {
 
-	public static String VERSION = "1.3.8";
+	public static String VERSION = "1.3.9";
 
 	private static final long serialVersionUID = 3051630277238752841L;
 	private static Scheduler scheduler = null;
